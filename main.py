@@ -17,13 +17,14 @@ class Order:
                          f"Адрес доставки: {self.address}\nДоставлен: {Delivery}\n")
         return order_info
 
-    def delivery(self):
+    def set_delivery(self):
         """Изменение статуса заказа"""
         self.is_delivered = not self.is_delivered
         return self.is_delivered
 
-Order1 = Order (1,"Заказ1","Иванов Иван Иванович","Екатеринбург, Ленина 2")
-Order2 = Order (2,"Заказ2","Петров Петр Петрович","Екатеринбург, Ленина 1")
+Order1 = Order(1,"Заказ1","Иванов Иван Иванович","Екатеринбург, Ленина 2")
+Order2 = Order(2,"Заказ2","Петров Петр Петрович","Екатеринбург, Ленина 1")
 
-print (Order1.order_info())
-print (Order2.delivery())
+print(Order1.order_info())
+Order2.set_delivery()
+print(Order2.order_info())
